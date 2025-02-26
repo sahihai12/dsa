@@ -307,97 +307,97 @@
 
 // doubly linked list is same as linked list but in this we have one more refrence of previous node
 
-class Node{
-    constructor(value){
-        this.value = value
-        this.prev = null
-        this.next = null
-    }
-}
+// class Node{
+//     constructor(value){
+//         this.value = value
+//         this.prev = null
+//         this.next = null
+//     }
+// }
 
-class DoublyLinkedlist{
-    constructor(value){
-        this.head = new Node(value)
-        this.tail = this.head
-        this.length = 1
-    }
+// class DoublyLinkedlist{
+//     constructor(value){
+//         this.head = new Node(value)
+//         this.tail = this.head
+//         this.length = 1
+//     }
 
-    push(value){
-        let newNode =  new Node(value)
-        if (!this.head) {
-            this.head = newNode
-            this.tail = newNode
-        }
+//     push(value){
+//         let newNode =  new Node(value)
+//         if (!this.head) {
+//             this.head = newNode
+//             this.tail = newNode
+//         }
 
-        this.tail.next = newNode
-        newNode.prev = this.tail
-        this.tail = newNode
-        this.length++
-        return this
-    }
+//         this.tail.next = newNode
+//         newNode.prev = this.tail
+//         this.tail = newNode
+//         this.length++
+//         return this
+//     }
 
-    pop(){
-        if (!this.head) {
-            return undefined
-        }
+//     pop(){
+//         if (!this.head) {
+//             return undefined
+//         }
 
 
-        let temp = this.head
-        let prev = temp
-        while(temp.next){
-            prev = temp
-            temp = temp.next
-        }
+//         let temp = this.head
+//         let prev = temp
+//         while(temp.next){
+//             prev = temp
+//             temp = temp.next
+//         }
 
-        prev.next = null
-        this.tail = prev
-        this.length--
-        return this
-    }
+//         prev.next = null
+//         this.tail = prev
+//         this.length--
+//         return this
+//     }
 
-    shift(){
-        if (!this.head) {
-            return false
-        }
+//     shift(){
+//         if (!this.head) {
+//             return false
+//         }
 
-        if (this.length == 1) {
-            this.head = null
-            this.tail = null
-            this.length = 0
-            return true
-        }
+//         if (this.length == 1) {
+//             this.head = null
+//             this.tail = null
+//             this.length = 0
+//             return true
+//         }
 
-        let firstOne =  this.head
+//         let firstOne =  this.head
 
-        this.head = this.head.next
-        this.head.prev = null
-        this.length--
-        return firstOne
-    }
+//         this.head = this.head.next
+//         this.head.prev = null
+//         this.length--
+//         return firstOne
+//     }
 
-    unshift(value){
-        const newNode = new Node(value)
-        if (!this.head) {
-            this.head = newNode
-            this.tail = this.head
-            this.length++
-            return
-        }
+//     unshift(value){
+//         const newNode = new Node(value)
+//         if (!this.head) {
+//             this.head = newNode
+//             this.tail = this.head
+//             this.length++
+//             return
+//         }
 
-        let temp = this.head
-        this.head = newNode
-        newNode.next = temp
-        this.length++
-    }
-}
+//         let temp = this.head
+//         this.head = newNode
+//         newNode.next = temp
+//         this.length++
+//     }
+// }
 
-const MyDoublyLinkedList = new DoublyLinkedlist(2)
+// const MyDoublyLinkedList = new DoublyLinkedlist(2)
 
-MyDoublyLinkedList.unshift(1)
-console.log(MyDoublyLinkedList);
+// MyDoublyLinkedList.unshift(1)
+// console.log(MyDoublyLinkedList);
 
-MyDoublyLinkedList.unshift(0)
-MyDoublyLinkedList.pop()
-console.log(MyDoublyLinkedList);
+// MyDoublyLinkedList.unshift(0)
+// MyDoublyLinkedList.pop()
+// console.log(MyDoublyLinkedList);
 
 

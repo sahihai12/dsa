@@ -1,0 +1,17 @@
+{
+  "name": "dsa",
+  "version": "1.0.0",
+  "description": "learning dsa ",
+  "main": "dsa.js",
+  "scripts": {
+    "start": "nodemon  ./dsa.js"
+  },
+  "keywords": [
+    "learning"
+  ],
+  "author": "sahilPrajapati",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
